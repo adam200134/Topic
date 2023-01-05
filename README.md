@@ -9,3 +9,12 @@ DB Browser: https://download.sqlitebrowser.org/DB.Browser.for.SQLite-3.12.2-win6
 npm i
 
 node bot
+
+config.json
+```
+{
+    "Prefix": "=",
+    "OwnerId": "",
+    "Token": ""
+}
+```

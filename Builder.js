@@ -1,6 +1,5 @@
-const { color } = require('./config.json');
 const db = require('better-sqlite3')('./data.db');
-const { Client, Message, EmbedBuilder, Collection, PermissionsString } = require("discord.js");
+const { Client, Message, Collection, PermissionsString } = require("discord.js");
 
 const client = new Client({
     allowedMentions: {
@@ -78,23 +77,6 @@ class Command {
         this.data = {}
         return this
     }
-}
-
-
-class Temp {
-    /** @param {string} str @param {string[]} args */
-    str(str, ...args) {
-        args.forEach((x, i) => str.split(`{${i}}`).join(x))
-        return str
-    }
-    /** @private @param {{txt?:string, type:"ok" | "error" | "pending"}} obj */
-    Embed = (obj) => new EmbedBuilder().setColor(color[obj.type]).setDescription(obj.txt)
-    /** @param {string?} txt */
-    OkEmbed = (txt) => this.Embed({ txt, type: "ok" })
-    /** @param {string?} txt */
-    ErrorEmbed = (txt) => this.Embed({ txt, type: "error" })
-    /** @param {string?} txt */
-    PendingEmbed = (txt) => this.Embed({ txt, type: "pending" })
 }
 
 module.exports = { client, db, Modules, Commands, Aliases, Command }
