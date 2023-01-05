@@ -1,4 +1,4 @@
-# Hiyori
+# Topic
 
 https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 
@@ -10,4 +10,4 @@ https://drive.google.com/drive/folders/14-CxU-QSqU2lGMv0_XXybceuMHHTf2X0?usp=sha
 
 npm init -y
 
-npm i better-sqlite3 discord.js @discordjs/builders @discordjs/rest discord-api-types axios ms js-yaml nhentai-api canvas
+npm i
