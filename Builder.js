@@ -1,32 +1,7 @@
 const db = require('better-sqlite3')('./data.db');
 const { Client, Message, Collection, PermissionsString } = require("discord.js");
 
-const client = new Client({
-    allowedMentions: {
-        parse: ['users', 'roles']
-    },
-    intents: [
-        "Guilds",
-        "GuildMembers",
-        "GuildBans",
-        "GuildEmojisAndStickers",
-        "GuildIntegrations",
-        "GuildWebhooks",
-        "GuildInvites",
-        "GuildVoiceStates",
-        "GuildPresences",
-        "GuildMessages",
-        "GuildMessageReactions",
-        "GuildMessageTyping",
-        "DirectMessages",
-        "DirectMessageReactions",
-        "DirectMessageTyping",
-        "MessageContent",
-        "GuildScheduledEvents",
-        "AutoModerationConfiguration",
-        "AutoModerationExecution"
-    ]
-});
+const client = new Client({ intents: '32767' });
 
 /** @type {Collection<string,string[]>} */
 const Modules = new Collection()

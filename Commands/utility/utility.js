@@ -1,6 +1,6 @@
 const { Command, client } = require('../../Builder');
 const { AttachmentBuilder, EmbedBuilder } = require('discord.js');
-const Canvas = require('canvas');
+//const Canvas = require('canvas');
 
 new Command('utility')
     .setName('avater', 'av')
